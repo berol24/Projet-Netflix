@@ -1,0 +1,72 @@
+.row{
+
+/* padding:  4%; */
+color: white;
+}
+.row .row-title{
+ font-size: 1.7rem;
+ padding: 0 1.5rem ;
+}
+.row  .row-images{
+  display: flex;
+  align-items: center;
+  overflow-x: visible;
+   overflow-y: hidden;/* permet d'apparaitre la barre de scroll */
+  width: 100%;
+  padding: 1.5rem 0 ;
+}
+
+.row .row-images .row-image{
+   
+   padding: 0.5rem;
+    width: 300px;
+    position: relative;
+    z-index: 1;
+    
+    /* transition: transform 0.3s ease-in; */
+    /* object-fit: cover;
+    margin: 0.6%; */
+}
+
+.row .row-images .row-image:hover{
+ cursor: pointer;
+ transform: scale(1.1);
+   filter: blur(3px);
+}
+
+ .modal-images {
+background-color: 2px solid purple;
+} 
+
+
+
+
+
+
+
+
+
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Pour empêcher les images de se serrer */
+}
+
+.image-description {
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*background-color: rgba(0, 0, 0, 0.5);  Fond semi-transparent */
+  color: white;
+  padding: 10px;
+  opacity: 0; /* Cacher par défaut */
+  transition: opacity 0.2s; /* Transition de 0.2 secondes pour l'opacité */
+  z-index: 2; /* S'assurer que le paragraphe est au-dessus de l'image */
+}
+
+.image-container:hover .image-description {
+  opacity: 1; /* Faire apparaître lorsqu'on passe la souris sur l'image */
+
+}
